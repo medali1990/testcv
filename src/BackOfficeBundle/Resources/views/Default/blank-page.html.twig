@@ -9,15 +9,15 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Blank Page
-                        <small>Subheading</small>
+                        Espace message
+                        <small>Du Front</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li>
                             <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                         </li>
                         <li class="active">
-                            <i class="fa fa-file"></i> Blank Page
+                            <i class="fa fa-file"></i> Mails
                         </li>
                     </ol>
                 </div>
@@ -26,8 +26,71 @@
 
         </div>
         <!-- /.container-fluid -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="alert alert-info alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <i class="fa fa-info-circle"></i>  <strong>Ici pour afficher les notifications</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="row">
+            <div class="col-sx-1 col-lg-12 col-md-2 ">
+                <div class="bs-docs-example">
+                    <ul id="myTab" class="nav nav-tabs">
+                          <li class="active"><a href="#nouveau_message" data-toggle="tab">Nouveau message</a></li>
+                          <li class=""><a href="#Messages_recus" data-toggle="tab">Messages recus</a></li>
+                          <li class=""><a href="#Messages_envoyes" data-toggle="tab">Messages envoyés</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                          <div class="tab-pane fade active in" id="nouveau_message">
+                            <p>envoyer un message</p>
+                          </div>
+                          <div class="tab-pane fade" id="Messages_recus">
+                            <div class="row">
+                                <div class="col-sx-1 col-lg-12 col-md-2 ">
+                                    <h2>Messages recus du front</h2>
+                                            <div class="responsive-table-line" style="margin:0px auto;max-width:700px;">
+                                                <table class="table table-bordered table-condensed table-body-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nom</th>
+                                                            <th>Mail</th>
+                                                            <th>Date</th>
+                                                            <th>Contenu</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for Message in Messages %}
+                                                            <tr>
+                                                                <td>{{ Message.nom }}</td>
+                                                                <td>{{ Message.mail }}</td>
+                                                                <td>{{ Message.date | date }}</td>
+                                                                <td>{{ Message.message }}</td>
+                                                            </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="Messages_envoyes">
+                            <p>ici les messages envoyés</p>
+                          </div>
+                    </div>
+              </div>
+            </div>
+          </div>
 
-    </div>
+
+
+
+
+
+
+        </div>
     <!-- /#page-wrapper -->
 
 </div>

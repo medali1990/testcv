@@ -1,6 +1,6 @@
 back_office_BalnkPage:
-    path:     /BlankPage/
-    defaults: { _controller: BackOfficeBundle:BlankPage:index }
+    path:     /mails/
+    defaults: { _controller: BackOfficeBundle:Mails:index }
 
 back_office_BootstrapElements:
     path:     /BootstrapElements/
